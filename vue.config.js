@@ -1,4 +1,6 @@
 module.exports = {
+  // github pages
+  publicPath: process.env.NODE_ENV === 'production' ? 'xiaozhong-ui' : '/',
   // 修改 src 为 examples
   pages: {
     index: {
