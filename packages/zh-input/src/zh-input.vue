@@ -1,6 +1,6 @@
 <template>
   <form>
-    <input required :type="type" :style="'width:'+inputWidth" />
+    <input required :type="type" />
     <label :alt="alt" :placeholder="placeholder"></label>
   </form>
 </template>
@@ -9,11 +9,11 @@
 export default {
   name: 'zhInput',
   props: {
-    alt: {
+    placeholder: {
       type: String,
       default: '请输入名称'
     },
-    placeholder: {
+    alt: {
       type: String,
       default: '名称'
     },
@@ -32,7 +32,8 @@ export default {
   }
 }
 </script>
-<style lang="css" scoped>
+
+<style socped>
 input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -50,21 +51,21 @@ input {
 input:focus {
   border-color: #00bafa;
 }
-input:focus + label[placeholder]:before {
+input:focus + label[alt]:before {
   color: #00bafa;
 }
-input:focus + label[placeholder]:before,
-input:valid + label[placeholder]:before {
+input:focus + label[alt]:before,
+input:valid + label[alt]:before {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
   -ms-transform: translate(0, -1.5em) scale(0.9, 0.9);
   transform: translate(0, -1.5em) scale(0.9, 0.9);
 }
-input:invalid + label[placeholder][alt]:before {
-  content: attr(alt);
+input:invalid + label[alt][placeholder]:before {
+  content: attr(placeholder);
 }
-input + label[placeholder] {
+input + label[alt] {
   display: block;
   pointer-events: none;
   line-height: 2.3em;
@@ -73,8 +74,8 @@ input + label[placeholder] {
   margin-bottom: -webkit-calc((3em - 1em) + 2px);
   margin-bottom: calc((3em - 1em) + 2px);
 }
-input + label[placeholder]:before {
-  content: attr(placeholder);
+input + label[alt]:before {
+  content: attr(alt);
   display: inline-block;
   margin: 0 -webkit-calc(1em + 2px);
   margin: 0 calc(1em + 2px);

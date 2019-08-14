@@ -1,9 +1,21 @@
 <template>
   <div id="app">
     <color-picker :color="color"></color-picker>
-    <zhIconfont :icon=icon></zhIconfont>
+    <zhIconfont :icon="icon"></zhIconfont>
     <!-- <zh-slider :items="items"></zh-slider> -->
-    <zh-input alt='请输入账号' placeholder='账号' type="password" width='100%'></zh-input>
+    <!-- <zh-input placeholder='请输入账号' alt='账号' type="password" width='100%'></zh-input> -->
+    <zh-button
+      type="primary"
+      width="80px"
+      height="auto"
+      padding="8px 20px"
+      fontSize="auto"
+      fontColor="#fff"
+    >button</zh-button>
+    <div class="leaf">
+      <zhBgi3D><h1>这是content部分</h1></zhBgi3D>
+    </div>
+
   </div>
 </template>
 
@@ -31,6 +43,10 @@ export default {
   }
 }
 </script>
-
-<style>
+<style scoped>
+  /* .leaf {
+    width: 80px;
+    height: 800px;
+    overflow: hidden;
+  } */
 </style>

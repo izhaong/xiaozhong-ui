@@ -1,10 +1,11 @@
 {
   "name": "xiaozhong-ui",
-  "version": "1.2.0",
+  "version": "1.5.0",
   "description": "仲灏自定义第三方UI组件库",
   "private": false,
   "main": "lib/xiaozhong-ui.umd.min.js",
   "keyword": "UI zhonghao izhaong xiaozhong",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
