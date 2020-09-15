@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: 仲灏<izhaong 164165005@qq.com>
+ * @Date: 2020-09-15 17:35:11
+ * @LastEditors: 仲灏<izhaong 164165005@qq.com>
+ * @LastEditTime: 2020-09-15 18:24:14
+ */
 // 导入组件
 import colorPicker from './color-picker'
 import zhIconfont from './zh-iconfont'
@@ -5,6 +12,7 @@ import zhSlider from './zh-slider'
 import zhInput from './zh-input'
 import zhButton from './zh-button'
 import zhBgi3D from './zh-bgi-3D'
+import zhTable from './zh-table'
 // import './style/common.css'
 
 // 存储组件列表
@@ -14,7 +22,8 @@ const components = [
   zhButton,
   zhSlider,
   zhInput,
-  zhBgi3D
+  zhBgi3D,
+  zhTable
 ]
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
